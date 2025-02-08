@@ -115,6 +115,4 @@ echo "CONFIG_FIRMWARE_INCLUDE_DDNS_SSL=y" >>.config
 
 ### Include HTTPS support. openssl ~1.2MB
 echo "CONFIG_FIRMWARE_INCLUDE_HTTPS=y" >>.config
-## 自定义插件
-echo "CONFIG_FIRMWARE_INCLUDE_NGINX=y" >>.config   # nginx ~20M
-echo "CONFIG_FIRMWARE_INCLUDE_DDNSGO=y" >>.config  #DDNS_GO
+
