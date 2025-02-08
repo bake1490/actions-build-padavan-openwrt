@@ -137,7 +137,11 @@ app(){
   #   echo '下载go '
   #   curl --create-dirs -L https://gomirrors.org/dl/go/go1.15.2.linux-amd64.tar.gz -o $WORK_DIR/trunk/tools/go/go1.15.2.linux-amd64.tar.gz
   # fi
-
+  if [ ! -f $WORK_DIR/trunk/tools/go/go1.15.2.linux-amd64.tar.gz ]; then
+    echo '下载go '
+    curl --create-dirs -L https://golang.google.cn/dl/go1.15.2.linux-amd64.tar.gz -o $WORK_DIR/trunk/tools/go/go1.15.2.linux-amd64.tar.gz
+  fi
+  
   if [ $LOGIN_FLAG = true ]; then
     \cp -f $BASE_DIR/public/$HTTP_FILE $WORK_DIR/trunk/user/httpd/httpd.c
     \cp -f $BASE_DIR/public/$LOGIN_PAGE $WORK_DIR/trunk/user/www/n56u_ribbon_fixed/$LOGIN_PAGE
